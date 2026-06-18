@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cambria", "Georgia", serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  color: #222;
+  line-height: 1.5;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.instructions p {
+  color: #c0392b;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+.instructions p:first-child {
+  font-size: 1.1rem;
+}
+
+h2 {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+thead th {
+  background-color: #1f5d80;
+  color: #fff;
+  text-align: left;
+  padding: 10px 12px;
+  font-weight: bold;
+}
+
+tbody td {
+  padding: 10px 12px;
+  border: 1px solid #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #d6e9f5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e9f3fa;
+}
+
+.contact-card {
+  background-color: #bbeebb;
+  border-radius: 30px;
+  padding: 35px 50px 45px;
+  margin-top: 40px;
+}
+
+.contact-card h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  gap: 20px;
+}
+
+.form-row label {
+  width: 90px;
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #fff;
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.submit-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.submit-wrap button {
+  background-color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 40px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Cambria", "Georgia", serif;
+}
+
+.submit-wrap button:hover {
+  background-color: #f0f0f0;
+}
