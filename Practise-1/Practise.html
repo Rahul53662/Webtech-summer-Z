@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <title>Student Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div>
+   <form action = "/action_page.php">
+    <fieldset>
+      <legend>
+        Student Information
+      </legend>
+      <table>
+        <tr>
+      <td><label for="fname">Full Name (Text)</label><br>
+      <input type ="text " placeholder="Enter your full name" id = "fname" name="fname"><br></td>
+      
+      <td><label for="email">Email Address</label><br>
+      <input type="email" placeholder="Enter your valid email address" id="email" name="email"><br>
+      </td>
+      </tr>
+      <tr>
+        <td><label for="password">Password</label><br>
+      <input type= "text" placeholder="Enter your password" id="password" name="password"><br></td>
+      <td><label for="age">Age Number</label><br>
+      <input type= "text" placeholder="Enter your age." id="age" name="age"><br></td>
+      </tr>
+      <tr>
+        <td><label for="experiment">Experimant Date</label><br>
+      <input type="date" id="experiment" name="experiment"><br></td>
+
+      <td><label for="pnumber">Phone Number(No.)</label><br>
+      <input type="text" placeholder="Enter your phone Number " id="pnumber" name="pnumber"><br></td>
+      
+      </table>
+      
+
+    </fieldset> 
+
+    <div class="button-container">
+      <input type="button" value="Submit" id="Submit">
+      <input type="button" value="Clear" id="Clear">
+      </div>
+  </div>
+
+</body>
+</html>

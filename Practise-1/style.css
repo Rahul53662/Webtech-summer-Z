@@ -1,0 +1,78 @@
+fieldset {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px solid blueviolet;
+  border-color: blueviolet;
+  border-radius: 25px;
+}
+
+legend{
+  background-color: blueviolet;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px solid blueviolet;
+  border-radius: 15px;
+  color: aliceblue;
+
+}
+
+form{
+  width: max-content;
+  margin: 50px auto;
+
+}
+
+td{
+  padding: 10px;
+}
+
+input{
+  opacity: 50%;
+  padding: 3px;
+}
+
+#Submit{
+  background-color: blueviolet;
+  opacity: 100%;
+  border-radius: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+
+}
+
+#Clear{
+  background-color: gray;
+  opacity: 100%;
+  border-radius: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
+
+.button-container{
+  text-align: center;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
