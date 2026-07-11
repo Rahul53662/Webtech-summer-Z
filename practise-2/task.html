@@ -1,0 +1,54 @@
+<html>
+<head>
+    <script src="script.js"></script>
+</head>
+<body>
+    <fieldset>
+      <legend>User Info</legend>
+      <form onsubmit="return validateForm()">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input type="text" id="firstName">
+                    <p id="fnameError" style="font-size:10px; color:red;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Last Name:</td>
+                <td>
+                    <input type="text" id="lastName">
+                    <p id="lnameError" style="font-size:10px; color:red;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input type="email" id="email">
+                    <p id="emailError" style="font-size:10px; color:red;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Phone:</td>
+                <td>
+                    <input type="tel" id="phone">
+                    <p id="phoneError" style="font-size:10px; color:red;"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Submit">
+                </td>
+            </tr>
+        </table>
+    </form>
+    </fieldset>
+
+    
+</body>
+</html>
