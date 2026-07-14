@@ -7,8 +7,7 @@ function validateForm() {
     const phone = document.getElementById("phone").value.trim();
 
     let isValid = true;
-
-    // First Name
+    
     if (!fName) {
         document.getElementById("fnameError").innerHTML = "First Name is required";
         isValid = false;
