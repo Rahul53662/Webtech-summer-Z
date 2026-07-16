@@ -1,0 +1,57 @@
+body{
+    font-family: Arial;
+    background-color:#eef5ff;
+}
+
+fieldset{
+    width:700px;
+    margin:auto;
+    background:white;
+    padding:20px;
+}
+
+legend{
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+}
+
+td{
+    padding:8px;
+}
+
+input,select{
+    width:100%;
+    padding:6px;
+}
+
+.required{
+    color:red;
+}
+
+p{
+    color:red;
+    margin:0;
+}
+
+button{
+    padding:8px 20px;
+}
+
+#studentTable{
+    width:80%;
+    margin:20px auto;
+    border-collapse:collapse;
+}
+
+#studentTable th,#studentTable td{
+    border:1px solid black;
+    padding:8px;
+    text-align:center;
+}
+
+#studentTable th{
+    background:lightblue;
+}
