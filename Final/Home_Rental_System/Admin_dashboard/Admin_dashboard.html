@@ -1,0 +1,271 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Admin Dashboard - UniRent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-background min-h-screen font-body-base overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 right-0 h-[72px] w-full md:w-[calc(100%-240px)] bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-stack_lg z-40">
+<div class="flex items-center gap-4">
+<h1 class="font-headline-md text-headline-md font-bold text-primary hidden md:block">UniRent Portal</h1>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface hover:text-primary transition-colors" id="mobile-menu-btn">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="flex items-center gap-container_gap">
+<!-- Search Bar (on_left in design, but pushing to right for balance in this layout, or keeping left of actions) -->
+<div class="hidden lg:flex items-center bg-surface-container-low rounded-full px-4 py-2 border border-outline-variant focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-outline text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm font-body-sm outline-none w-64 placeholder-outline" placeholder="Search..." type="text">
+</div>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary transition-all hover:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-secondary hover:text-primary transition-all hover:scale-95">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant cursor-pointer">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional headshot of a property manager in a well-lit office setting. The lighting is soft and natural, emphasizing a trustworthy and competent demeanor. The background is a slightly blurred, modern office space with neutral tones, aligning with the clean, institutional modern aesthetic of the application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI12ENB-ONnjW-Udvx5Rn4hz83Rmw2aMwXKMqbGin6s7_nEKJnguhQ4JeW6x4SphdEsxim2vl45G7FyEeuTQyQ1-g0uNZJwTRYwp9IDceg-nPzLyUqn1RHE32JyvcspLklIBCIkTEaXCFmp2pGNqAFxSGLhYD1wCK3hn9ka4j4nDRv0D3SvabbMXIuqeppGLHz6FEWwIyLy5tzDrkmOzzOyRl7kqsgeXYxAlOtd52I6t6xBpFSXzQ">
+</div>
+</div>
+</div>
+</header>
+<!-- Side Nav Bar -->
+<nav class="fixed left-0 top-0 h-screen w-[240px] bg-surface-container-high border-r border-outline-variant flex flex-col py-stack_lg z-50 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out" id="sidebar">
+<div class="px-6 mb-8 flex items-center justify-between md:block">
+<div>
+<h2 class="font-display-lg text-display-lg font-bold text-primary">UniRent</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Management Portal</p>
+</div>
+<button class="md:hidden text-on-surface" id="close-menu-btn">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto flex flex-col gap-1 px-2">
+<!-- Active: Dashboard -->
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-primary font-bold border-l-4 border-primary rounded-r-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-body-base text-body-base">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-body-base text-body-base">Search</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-body-base text-body-base">Properties</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-body-base text-body-base">My Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-body-base text-body-base">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-body-base text-body-base">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body-base text-body-base">Profile</span>
+</a>
+</div>
+<div class="px-2 mt-auto pt-4">
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors rounded-lg ml-1" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-base text-body-base">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Overlay for mobile sidebar -->
+<div class="fixed inset-0 bg-on-surface/50 z-40 hidden md:hidden" id="sidebar-overlay"></div>
+<!-- Main Content Area -->
+<main class="md:ml-[240px] pt-[72px] min-h-screen p-4 md:p-stack_lg">
+<div class="max-w-[1200px] mx-auto">
+<header class="mb-8">
+<h2 class="font-headline-md text-headline-md text-on-surface">Overview</h2>
+<p class="font-body-sm text-body-sm text-secondary">Platform metrics and pending tasks.</p>
+</header>
+<!-- Summary Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-container_gap mb-8">
+<!-- Card 1: Total Users -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Total Users</span>
+</div>
+<div class="relative z-10">
+<span class="font-display-lg text-display-lg text-on-surface block">1,240</span>
+<span class="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span> +12% this month
+                        </span>
+</div>
+</div>
+<!-- Card 2: Pending Properties -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Pending Properties</span>
+</div>
+<div class="relative z-10">
+<span class="font-display-lg text-display-lg text-on-surface block">48</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+                            Requires review
+                        </span>
+</div>
+</div>
+<!-- Card 3: Active Properties -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined" data-icon="real_estate_agent">real_estate_agent</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Active Properties</span>
+</div>
+<div class="relative z-10">
+<span class="font-display-lg text-display-lg text-on-surface block">3,892</span>
+<span class="font-body-sm text-body-sm text-secondary flex items-center gap-1 mt-1">
+                            Across 12 campuses
+                        </span>
+</div>
+</div>
+<!-- Card 4: Open Complaints -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow relative overflow-hidden group">
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined" data-icon="report_problem">report_problem</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Open Complaints</span>
+</div>
+<div class="relative z-10">
+<span class="font-display-lg text-display-lg text-on-surface block">15</span>
+<span class="font-body-sm text-body-sm text-error flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="priority_high">priority_high</span> 3 high priority
+                        </span>
+</div>
+</div>
+</div>
+<!-- Pending Approvals Table Section -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden">
+<div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-surface-container-lowest">
+<h3 class="font-title-sm text-title-sm text-on-surface">Pending Property Approvals</h3>
+<button class="font-body-sm text-body-sm text-primary hover:underline flex items-center gap-1">
+                        View All <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-bright border-b border-outline-variant">
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Property Name</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Landlord</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Date Submitted</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Status</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase text-right">Action</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-3 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest overflow-hidden">
+<img alt="Property thumbnail" class="w-full h-full object-cover" data-alt="A small thumbnail image showing the exterior of a modern apartment building suitable for student housing. The architecture is clean with brick and glass elements, bathed in bright daylight. The image acts as a visual icon for a property listing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuACE-UtkEo5ryuiBJBtcTdfX40j0dd-jelNenLNCoTXhc_fBaKFdjABnYJSPg_-2gTluGU5y-rn1PiBf-WoBXTsE1AhbxxBJ0_qbeT6Af9cDehjto3fs19Ilg5GamSgmjzenlrSqWoz93pX7qIuIwnNjW7rejDp_UqL45bM-_BY0R8Mz4WVxlRXN75DMqVpZ6En-jWZQct69UbRkVZPFXfqVL88nE11zY-DyuyBpIz9AFo9RLJI6p4">
+</div>
+<div>
+<p class="font-bold text-on-surface">Campus View Apartments</p>
+<p class="text-secondary text-[12px]">123 University Ave</p>
+</div>
+</td>
+<td class="py-3 px-4 text-secondary">John Smith</td>
+<td class="py-3 px-4 text-secondary">Oct 24, 2023</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full text-[12px] font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                                        Pending Review
+                                    </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded text-[14px] font-medium hover:bg-surface-tint transition-colors">Review</button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors">
+<td class="py-3 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest overflow-hidden">
+<img alt="Property thumbnail" class="w-full h-full object-cover" data-alt="A thumbnail image of a cozy, slightly older multi-family house near a campus. It features a prominent front porch and mature trees around it, representing a typical off-campus student rental option." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPGPmre90pSO5q04ygEz3HpBt_RUecwIUoiD20WM1TdzM0s_timMr3iZxXozSksLyl8f0JjY2wocLs0lZ5La_G_aqVltI2OEHxOvRgFFa0a5vj8IR5tWnGlXPI9iTqWvttppWsEt6rK0zihUvdgSTCuxtTqS_ycYXRmsT5U1QPXxsER_OAng0wxgcabLlEa-T7qG5y3aEnS7_2WMv826zaMMeb-etXqfPwss3-Ck1ZttcXnfWm2sc">
+</div>
+<div>
+<p class="font-bold text-on-surface">The Elm St House</p>
+<p class="text-secondary text-[12px]">45 Elm Street</p>
+</div>
+</td>
+<td class="py-3 px-4 text-secondary">Sarah Jenkins</td>
+<td class="py-3 px-4 text-secondary">Oct 23, 2023</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full text-[12px] font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                                        Pending Review
+                                    </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="bg-primary text-on-primary px-3 py-1.5 rounded text-[14px] font-medium hover:bg-surface-tint transition-colors">Review</button>
+</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="py-3 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-container-highest overflow-hidden flex items-center justify-center text-outline">
+<span class="material-symbols-outlined" data-icon="image">image</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Varsity Lofts Unit 4B</p>
+<p class="text-secondary text-[12px]">89 College Blvd</p>
+</div>
+</td>
+<td class="py-3 px-4 text-secondary">Varsity Mgmt LLC</td>
+<td class="py-3 px-4 text-secondary">Oct 22, 2023</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full text-[12px] font-medium bg-error-container text-on-error-container">
+                                        Missing Docs
+                                    </span>
+</td>
+<td class="py-3 px-4 text-right">
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface px-3 py-1.5 rounded text-[14px] font-medium hover:bg-surface-container-low transition-colors">Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+<script>
+        // Mobile Sidebar Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu-btn');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebar-overlay');
+
+            function toggleMenu() {
+                sidebar.classList.toggle('-translate-x-full');
+                overlay.classList.toggle('hidden');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            if(menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if(closeBtn) closeBtn.addEventListener('click', toggleMenu);
+            if(overlay) overlay.addEventListener('click', toggleMenu);
+        });
+    </script>
+</body></html>

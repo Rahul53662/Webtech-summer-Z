@@ -1,0 +1,68 @@
+/* UniRent Tenant Dashboard - separated custom CSS */
+
+:root {
+  --on-error:#ffffff; --on-tertiary-container:#fffbff; --on-secondary-container:#586377;
+  --on-secondary-fixed-variant:#3c475a; --on-surface-variant:#424754;
+  --secondary-fixed-dim:#bcc7de; --on-secondary:#ffffff; --error:#ba1a1a;
+  --surface-bright:#f8f9fa; --outline-variant:#c2c6d6; --inverse-primary:#adc6ff;
+  --on-surface:#191c1d; --on-tertiary-fixed:#311400; --tertiary-fixed-dim:#ffb786;
+  --surface-tint:#005ac2; --surface-container-low:#f3f4f5; --surface:#f8f9fa;
+  --tertiary-fixed:#ffdcc6; --primary-fixed:#d8e2ff; --tertiary:#924700;
+  --error-container:#ffdad6; --surface-container-highest:#e1e3e4;
+  --surface-container-lowest:#ffffff; --secondary-container:#d5e0f8;
+  --inverse-on-surface:#f0f1f2; --on-primary-fixed-variant:#004395;
+  --surface-container-high:#e7e8e9; --on-tertiary-fixed-variant:#723600;
+  --tertiary-container:#b75b00; --on-secondary-fixed:#111c2d;
+  --on-primary-fixed:#001a42; --surface-variant:#e1e3e4;
+  --on-error-container:#93000a; --surface-dim:#d9dadb;
+  --primary-container:#2170e4; --outline:#727785; --on-background:#191c1d;
+  --secondary-fixed:#d8e3fb; --inverse-surface:#2e3132; --on-primary:#ffffff;
+  --primary-fixed-dim:#adc6ff; --primary:#0058be; --background:#f8f9fa;
+  --on-primary-container:#fefcff; --secondary:#545f73; --surface-container:#edeeef;
+  --on-tertiary:#ffffff;
+  --header-height:72px; --sidebar-width:240px; --stack-sm:8px;
+  --stack-lg:32px; --inner-padding:16px; --container-gap:24px; --stack-md:16px;
+}
+
+body { font-family:"Inter",sans-serif; background-color:#f8f9fa; }
+
+.h-header_height { height:var(--header-height); }
+.w-sidebar_width { width:var(--sidebar-width); }
+.ml-sidebar_width { margin-left:var(--sidebar-width); }
+.py-stack_lg { padding-top:var(--stack-lg); padding-bottom:var(--stack-lg); }
+.p-stack_lg { padding:var(--stack-lg); }
+.gap-container_gap { gap:var(--container-gap); }
+
+.font-label-caps {
+  font-family:"Inter",sans-serif; font-size:12px; line-height:16px;
+  letter-spacing:.05em; font-weight:600;
+}
+.font-headline-md {
+  font-family:"Inter",sans-serif; font-size:24px; line-height:32px;
+  letter-spacing:-.01em; font-weight:600;
+}
+.font-display-lg {
+  font-family:"Inter",sans-serif; font-size:30px; line-height:38px;
+  letter-spacing:-.02em; font-weight:700;
+}
+.font-body-base {
+  font-family:"Inter",sans-serif; font-size:16px; line-height:24px; font-weight:400;
+}
+.font-body-sm {
+  font-family:"Inter",sans-serif; font-size:14px; line-height:20px; font-weight:400;
+}
+.font-title-sm {
+  font-family:"Inter",sans-serif; font-size:18px; line-height:28px; font-weight:600;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;
+}
+
+.card-shadow:hover {
+  box-shadow:0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+
+@media (max-width:767px) {
+  .ml-sidebar_width { margin-left:0; }
+}

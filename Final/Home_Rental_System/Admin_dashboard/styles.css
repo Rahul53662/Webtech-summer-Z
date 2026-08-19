@@ -1,0 +1,71 @@
+/* UniRent Admin Dashboard custom styles */
+
+:root {
+  --on-error:#fff; --on-tertiary-container:#fffbff; --on-secondary-container:#586377;
+  --on-secondary-fixed-variant:#3c475a; --on-surface-variant:#424754;
+  --secondary-fixed-dim:#bcc7de; --on-secondary:#fff; --error:#ba1a1a;
+  --surface-bright:#f8f9fa; --outline-variant:#c2c6d6; --inverse-primary:#adc6ff;
+  --on-surface:#191c1d; --on-tertiary-fixed:#311400; --tertiary-fixed-dim:#ffb786;
+  --surface-tint:#005ac2; --surface-container-low:#f3f4f5; --surface:#f8f9fa;
+  --tertiary-fixed:#ffdcc6; --primary-fixed:#d8e2ff; --tertiary:#924700;
+  --error-container:#ffdad6; --surface-container-highest:#e1e3e4;
+  --surface-container-lowest:#fff; --secondary-container:#d5e0f8;
+  --inverse-on-surface:#f0f1f2; --on-primary-fixed-variant:#004395;
+  --surface-container-high:#e7e8e9; --on-tertiary-fixed-variant:#723600;
+  --tertiary-container:#b75b00; --on-secondary-fixed:#111c2d;
+  --on-primary-fixed:#001a42; --surface-variant:#e1e3e4;
+  --on-error-container:#93000a; --surface-dim:#d9dadb;
+  --primary-container:#2170e4; --outline:#727785; --on-background:#191c1d;
+  --secondary-fixed:#d8e3fb; --inverse-surface:#2e3132; --on-primary:#fff;
+  --primary-fixed-dim:#adc6ff; --primary:#0058be; --background:#f8f9fa;
+  --on-primary-container:#fefcff; --secondary:#545f73; --surface-container:#edeeef;
+  --on-tertiary:#fff;
+  --header-height:72px; --sidebar-width:240px; --stack-lg:32px;
+  --container-gap:24px;
+}
+
+body { font-family:"Inter",sans-serif; }
+.bg-background{background-color:var(--background)}
+.text-on-background{color:var(--on-background)}
+.bg-surface-container-high{background-color:var(--surface-container-high)}
+.bg-surface-container-low{background-color:var(--surface-container-low)}
+.bg-surface-container-lowest{background-color:var(--surface-container-lowest)}
+.bg-surface-container-highest{background-color:var(--surface-container-highest)}
+.bg-surface-bright{background-color:var(--surface-bright)}
+.bg-primary{background-color:var(--primary)}
+.bg-primary-fixed{background-color:var(--primary-fixed)}
+.bg-secondary-container{background-color:var(--secondary-container)}
+.bg-tertiary-container{background-color:var(--tertiary-container)}
+.bg-tertiary-fixed{background-color:var(--tertiary-fixed)}
+.bg-error-container{background-color:var(--error-container)}
+.text-primary{color:var(--primary)}
+.text-secondary{color:var(--secondary)}
+.text-on-primary{color:var(--on-primary)}
+.text-on-primary-fixed{color:var(--on-primary-fixed)}
+.text-on-primary-container{color:var(--on-primary-container)}
+.text-on-surface{color:var(--on-surface)}
+.text-on-tertiary-container{color:var(--on-tertiary-container)}
+.text-on-tertiary-fixed-variant{color:var(--on-tertiary-fixed-variant)}
+.text-error{color:var(--error)}
+.text-outline{color:var(--outline)}
+.border-outline-variant{border-color:var(--outline-variant)}
+.font-body-base{font-size:16px;line-height:24px;font-weight:400}
+.font-body-sm{font-size:14px;line-height:20px;font-weight:400}
+.font-title-sm{font-size:18px;line-height:28px;font-weight:600}
+.font-headline-md{font-size:24px;line-height:32px;font-weight:600}
+.font-display-lg{font-size:30px;line-height:38px;font-weight:700;letter-spacing:-.02em}
+.font-label-caps{font-size:12px;line-height:16px;letter-spacing:.05em;font-weight:600}
+.font-body-base,.font-body-sm,.font-title-sm,.font-headline-md,.font-display-lg,.font-label-caps{font-family:"Inter",sans-serif}
+.h-header_height{height:var(--header-height)}
+.w-sidebar_width{width:var(--sidebar-width)}
+.ml-sidebar_width{margin-left:var(--sidebar-width)}
+.py-stack_lg{padding-top:var(--stack-lg);padding-bottom:var(--stack-lg)}
+.p-stack_lg{padding:var(--stack-lg)}
+.gap-container_gap{gap:var(--container-gap)}
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+@media (max-width:767px){.ml-sidebar_width{margin-left:0}}
+
+/* Original inline style */
+.material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }

@@ -1,0 +1,312 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>UniRent Portal - Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-background m-0 p-0 overflow-x-hidden min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="bg-surface-container-high dark:bg-inverse-surface fixed left-0 top-0 h-screen w-[240px] border-r border-outline-variant dark:border-outline z-50 flex flex-col h-full py-stack_lg hidden md:flex">
+<div class="px-6 mb-8 flex flex-col gap-1">
+<span class="font-display-lg text-display-lg font-bold text-primary dark:text-primary-fixed">UniRent</span>
+<span class="font-body-sm text-body-sm text-secondary">Management Portal</span>
+</div>
+<div class="flex-1 overflow-y-auto">
+<div class="flex flex-col gap-1">
+<!-- Active -->
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container dark:bg-secondary-fixed-dim text-primary dark:text-on-secondary-fixed font-bold border-l-4 border-primary hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors opacity-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="dashboard">dashboard</span>
+<span class="font-body-base text-body-base">Dashboard</span>
+</a>
+<!-- Inactive -->
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="search">search</span>
+<span class="font-body-base text-body-base">Search</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="domain">domain</span>
+<span class="font-body-base text-body-base">Properties</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="calendar_month">calendar_month</span>
+<span class="font-body-base text-body-base">My Bookings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="payments">payments</span>
+<span class="font-body-base text-body-base">Payments</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="chat">chat</span>
+<span class="font-body-base text-body-base">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="person">person</span>
+<span class="font-body-base text-body-base">Profile</span>
+</a>
+</div>
+</div>
+<div class="mt-auto pt-4 border-t border-outline-variant mx-4">
+<a class="flex items-center gap-3 px-4 py-3 text-secondary dark:text-secondary-fixed-dim hover:bg-surface-container-highest dark:hover:bg-surface-variant transition-colors" href="#">
+<span class="material-symbols-outlined font-body-base text-body-base" data-icon="logout">logout</span>
+<span class="font-body-base text-body-base">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 md:ml-[240px] flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant dark:border-outline fixed top-0 right-0 h-[72px] w-full md:w-[calc(100%-240px)] z-40 flex justify-between items-center px-stack_lg">
+<!-- Mobile Menu Toggle (Visible only on mobile) -->
+<div class="md:hidden flex items-center">
+<button class="text-primary p-2 hover:bg-surface-container-highest rounded-full transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Product Name / Search Area -->
+<div class="flex items-center gap-6 flex-1">
+<h1 class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed hidden md:block">UniRent Portal</h1>
+<div class="relative w-full max-w-md hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary font-body-base text-body-base">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface rounded-lg border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary-fixed outline-none font-body-sm text-body-sm text-on-surface transition-all" placeholder="Search tenants, properties, or transactions..." type="text">
+</div>
+</div>
+<!-- Trailing Actions & Profile -->
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary transition-colors hover:scale-95 transition-transform p-2 rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined font-title-sm text-title-sm" data-icon="notifications">notifications</span>
+</button>
+<button class="text-secondary hover:text-primary transition-colors hover:scale-95 transition-transform p-2 rounded-full hover:bg-surface-container hidden sm:block">
+<span class="material-symbols-outlined font-title-sm text-title-sm" data-icon="help">help</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant ml-2 cursor-pointer hover:border-primary transition-colors">
+<img alt="User profile" class="w-full h-full object-cover" data-alt="A professional headshot of a middle-aged property manager wearing a modern suit, photographed with clean corporate lighting against a minimal bright white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnD8lBO54Bqi2I6DWUZN-1LCTC0QcvIzBjADFYp0040A0E1tixqN2rZYwsvItJZKPL3ymdnK5TytKq8VGeyI-52w9rnUZIhQiMBak36DzbapoITWaJVawqgsO2R8oM6GW9D49sZ88pIPeR7Vik_DDq43i9NGHytRCUnlRdnbzwMvTiJzuX7uf9NG5GQyFyOnsnZd8HXHpKg5SjkGyE0aMFCIkEHmyd48OOqHQl1H8YZqO0YLfDNG0">
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-1 mt-[72px] p-4 md:p-stack_lg bg-background">
+<div class="mb-8">
+<h2 class="font-display-lg text-display-lg font-bold text-on-surface">Super Admin Overview</h2>
+<p class="font-body-base text-body-base text-secondary mt-1">Platform metrics and system health for UniRent.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-container_gap mb-8">
+<!-- KPI Card 1: Total Users -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col gap-4 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Total Users</span>
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+</div>
+<div>
+<span class="font-display-lg text-display-lg font-bold text-on-surface">1,500</span>
+<div class="flex items-center gap-1 mt-1 text-green-600">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-body-sm text-body-sm font-semibold">+12% this month</span>
+</div>
+</div>
+</div>
+<!-- KPI Card 2: Active Properties -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col gap-4 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Active Properties</span>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">real_estate_agent</span>
+</div>
+</div>
+<div>
+<span class="font-display-lg text-display-lg font-bold text-on-surface">4,200</span>
+<div class="flex items-center gap-1 mt-1 text-green-600">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-body-sm text-body-sm font-semibold">+5% this month</span>
+</div>
+</div>
+</div>
+<!-- KPI Card 3: Active Bookings -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col gap-4 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Active Bookings</span>
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">book_online</span>
+</div>
+</div>
+<div>
+<span class="font-display-lg text-display-lg font-bold text-on-surface">1,100</span>
+<div class="flex items-center gap-1 mt-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]">horizontal_rule</span>
+<span class="font-body-sm text-body-sm font-semibold">Stable</span>
+</div>
+</div>
+</div>
+<!-- KPI Card 4: Total Revenue -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col gap-4 hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Total Revenue</span>
+<div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-700">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+</div>
+<div>
+<span class="font-display-lg text-display-lg font-bold text-on-surface">$125,000</span>
+<div class="flex items-center gap-1 mt-1 text-green-600">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-body-sm text-body-sm font-semibold">+18% this month</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Grid: Chart & Table -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-container_gap">
+<!-- Revenue Chart Container -->
+<div class="lg:col-span-2 bg-surface-container-lowest border border-outline-variant rounded-xl hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Revenue Growth</h3>
+<button class="p-2 text-secondary hover:text-primary transition-colors rounded">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<div class="p-6 flex-1 flex items-end relative min-h-[300px]">
+<!-- Simple CSS Bar Chart Representation -->
+<div class="w-full flex justify-between items-end h-full gap-2 px-4 pb-8">
+<!-- Y-Axis labels (simulated) -->
+<div class="absolute left-4 top-6 bottom-10 flex flex-col justify-between text-label-caps font-label-caps text-secondary">
+<span>150k</span>
+<span>100k</span>
+<span>50k</span>
+<span>0</span>
+</div>
+<!-- Grid lines (simulated) -->
+<div class="absolute inset-x-4 top-6 bottom-10 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="w-full border-b border-outline border-dashed"></div>
+<div class="w-full border-b border-outline border-dashed"></div>
+<div class="w-full border-b border-outline border-dashed"></div>
+<div class="w-full border-b border-outline border-solid"></div>
+</div>
+<!-- Bars -->
+<div class="w-1/6 bg-primary-fixed hover:bg-primary transition-colors rounded-t-sm h-[30%] relative group z-10 ml-8">
+<span class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-secondary">Jan</span>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">$40k</div>
+</div>
+<div class="w-1/6 bg-primary-fixed hover:bg-primary transition-colors rounded-t-sm h-[45%] relative group z-10">
+<span class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-secondary">Feb</span>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">$60k</div>
+</div>
+<div class="w-1/6 bg-primary-fixed hover:bg-primary transition-colors rounded-t-sm h-[40%] relative group z-10">
+<span class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-secondary">Mar</span>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">$55k</div>
+</div>
+<div class="w-1/6 bg-primary-fixed hover:bg-primary transition-colors rounded-t-sm h-[60%] relative group z-10">
+<span class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-secondary">Apr</span>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">$80k</div>
+</div>
+<div class="w-1/6 bg-primary-fixed hover:bg-primary transition-colors rounded-t-sm h-[75%] relative group z-10">
+<span class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-secondary">May</span>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">$100k</div>
+</div>
+<div class="w-1/6 bg-primary hover:bg-surface-tint transition-colors rounded-t-sm h-[95%] relative group z-10 shadow-[0_0_15px_rgba(33,112,228,0.3)]">
+<span class="absolute -bottom-6 left-1/2 -translate-x-1/2 font-label-caps text-label-caps text-on-surface font-bold">Jun</span>
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-2 py-1 rounded text-[10px] opacity-0 group-hover:opacity-100 transition-opacity">$125k</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Activity Table Container -->
+<div class="lg:col-span-1 bg-surface-container-lowest border border-outline-variant rounded-xl hover:shadow-[0_4px_6px_-1px_rgb(0,0,0,0.05),0_2px_4px_-2px_rgb(0,0,0,0.05)] transition-shadow overflow-hidden flex flex-col">
+<div class="p-6 border-b border-outline-variant bg-surface-bright">
+<h3 class="font-headline-md text-headline-md font-semibold text-on-surface">Recent System Activity</h3>
+</div>
+<div class="overflow-x-auto flex-1">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface font-label-caps text-label-caps text-secondary uppercase border-b border-outline-variant">
+<th class="py-3 px-4 font-semibold">Event</th>
+<th class="py-3 px-4 font-semibold text-right">Time</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-outline-variant">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-green-50 text-green-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+</div>
+<div>
+<p class="font-medium">New User Reg</p>
+<p class="text-secondary text-[12px]">ID: USR-892</p>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-right text-secondary">2m ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-50 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</div>
+<div>
+<p class="font-medium">Payment Processed</p>
+<p class="text-secondary text-[12px]">$1,200 - APT 4B</p>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-right text-secondary">15m ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-orange-50 text-orange-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+<div>
+<p class="font-medium">System Alert</p>
+<p class="text-secondary text-[12px]">High load detected</p>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-right text-secondary">1h ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-purple-50 text-purple-600 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">domain_add</span>
+</div>
+<div>
+<p class="font-medium">Property Added</p>
+<p class="text-secondary text-[12px]">Westside Complex</p>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-right text-secondary">3h ago</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-secondary-fixed text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">settings</span>
+</div>
+<div>
+<p class="font-medium">Config Update</p>
+<p class="text-secondary text-[12px]">Admin User</p>
+</div>
+</div>
+</td>
+<td class="py-3 px-4 text-right text-secondary">5h ago</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 border-t border-outline-variant bg-surface-bright text-center">
+<button class="text-primary font-body-sm text-body-sm font-semibold hover:underline">View All Logs</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

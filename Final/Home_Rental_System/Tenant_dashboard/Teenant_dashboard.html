@@ -1,0 +1,217 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Tenant Dashboard - UniRent</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen w-sidebar_width bg-surface-container-high border-r border-outline-variant flex flex-col py-stack_lg z-50">
+<div class="px-6 mb-8">
+<h1 class="font-display-lg text-display-lg text-primary">UniRent</h1>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Management Portal</p>
+</div>
+<ul class="flex flex-col flex-grow">
+<!-- Active: Dashboard -->
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-primary font-bold border-l-4 border-primary hover:bg-surface-container-highest transition-colors opacity-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-body-base text-body-base">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-body-base text-body-base">Search</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-body-base text-body-base">Properties</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span>
+<span class="font-body-base text-body-base">My Bookings</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+<span class="font-body-base text-body-base">Payments</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-body-base text-body-base">Messages</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-body-base text-body-base">Profile</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto">
+<a class="flex items-center gap-3 px-4 py-3 text-secondary hover:bg-surface-container-highest transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-body-base text-body-base">Logout</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-grow ml-sidebar_width flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 right-0 h-header_height w-[calc(100%-240px)] bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-stack_lg z-40">
+<div class="flex items-center">
+<span class="font-headline-md text-headline-md font-bold text-primary mr-4">UniRent Portal</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary transition-all p-2 rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-secondary hover:text-primary transition-all p-2 rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="h-8 w-8 rounded-full overflow-hidden border border-outline-variant cursor-pointer">
+<img alt="User profile" class="object-cover w-full h-full" data-alt="Professional headshot of a university student, bright lighting, light mode aesthetic, modern institutional style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBM6CnpqV4VH531D6076skkq7KslCpo3Pzfic_oZQFLIgNXscWiV-raWvRLmUjph7LxTp8hfA4jknJHFpL40KCqjIZA7pl-C0c0XQ_bbqkQho-UMv__1CFamXMYjSzXp_wqCc7ypIRsGUIFfJn3Vp8esLS63Bo73zxb_IwnJr2F7hbJRi27A4k-jkZwFMuleFlr8Q6SZpkuH8ZMVuwfgkkWUcpc8er0NdgPJdOo23Ba2aXoLWlxrYI">
+</div>
+</div>
+</header>
+<!-- Dashboard Canvas -->
+<main class="flex-grow pt-[104px] p-stack_lg">
+<div class="mb-stack_lg">
+<h2 class="font-headline-md text-headline-md text-on-surface">Dashboard Overview</h2>
+<p class="font-body-sm text-body-sm text-secondary mt-1">Welcome back. Here is the status of your rentals.</p>
+</div>
+<!-- Summary Cards Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-container_gap mb-stack_lg">
+<!-- Card 1: Total Bookings -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 card-shadow transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary-container rounded-lg text-on-primary-container inline-flex">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+</div>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary uppercase mb-1">Total Bookings</h3>
+<p class="font-display-lg text-display-lg text-on-surface">12</p>
+</div>
+</div>
+<!-- Card 2: Pending -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 card-shadow transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container rounded-lg text-on-secondary-container inline-flex">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">pending_actions</span>
+</div>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary uppercase mb-1">Pending</h3>
+<p class="font-display-lg text-display-lg text-on-surface">3</p>
+</div>
+</div>
+<!-- Card 3: Approved -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 card-shadow transition-shadow">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-surface-container-high rounded-lg text-on-surface inline-flex border border-outline-variant">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<div>
+<h3 class="font-label-caps text-label-caps text-secondary uppercase mb-1">Approved</h3>
+<p class="font-display-lg text-display-lg text-on-surface">8</p>
+</div>
+</div>
+<!-- Card 4: Upcoming -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-6 card-shadow transition-shadow relative overflow-hidden">
+<div class="absolute inset-0 bg-primary opacity-5 pointer-events-none"></div>
+<div class="flex justify-between items-start mb-4 relative z-10">
+<div class="p-2 bg-primary text-on-primary rounded-lg inline-flex">
+<span class="material-symbols-outlined" data-weight="fill" style="font-variation-settings: 'FILL' 1;">event_upcoming</span>
+</div>
+</div>
+<div class="relative z-10">
+<h3 class="font-label-caps text-label-caps text-primary uppercase mb-1">Upcoming</h3>
+<p class="font-display-lg text-display-lg text-primary">1</p>
+</div>
+</div>
+</div>
+<!-- Recent Bookings Table Section -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden card-shadow">
+<div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+<h3 class="font-title-sm text-title-sm text-on-surface">Recent Bookings</h3>
+<button class="font-label-caps text-label-caps text-primary hover:text-primary-container transition-colors uppercase">View All</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-background border-b border-outline-variant">
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Property</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Date</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase">Status</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase text-right">Amount</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors group cursor-pointer">
+<td class="py-3 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-variant flex-shrink-0 overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Modern university apartment building exterior, clean lines, bright daylight, professional architectural photography style, light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZmxBLDRg-lE9MI-8lUwrydnBzJ6d0nfnevho7tTMvEDahg3aqT1QRGHv5vhtnIyf4GUUhQWI_iGxKhbiYQ7Y3Ru_H5bqVm26ph7L_CFt09OIoIkaKiYaR967V85yNp3LhDWFOd2JlztpM5B2HSeFvPnqgAunxtWF9JDeFU7ls5-kBNnPEcJTmPHZR_-GyAfv5_ZIlDl9ZQtJHnn2dvlxY1VaaMdURxDVnhwgQ22NCOuTWeDjgLy0">
+</div>
+<span class="font-title-sm text-title-sm group-hover:text-primary transition-colors">Oaks North Apartments - 2B</span>
+</td>
+<td class="py-3 px-4 text-secondary">Sep 01, 2024</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface border border-outline-variant">
+                                        Approved
+                                    </span>
+</td>
+<td class="py-3 px-4 text-right font-body-base text-body-base">$1,250/mo</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-bright transition-colors group cursor-pointer">
+<td class="py-3 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-variant flex-shrink-0 overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Cozy modern student studio apartment interior, bright sunlight, clean minimalist furniture, light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdI3k5oSNyHnADUSxeh-dZu4TKxs6SeppGRtEPJVTOse8XVnQKbEAvV5Puvn3G1yoLYfcHR0sELzErPrGduOczL5gfYPZIW9pAtLVKhJvKokkLMQBHEDWXykGyrVsLGmKTKcIY9QjIXkkMCfdfpORn_fxzI0ZFpe8mL2BnXqJ3zzhWoa_3fxTbzt_zbL8LE49lRAwDp1hrSVwaXjgIamFTTOL1m7T1IxiZ7ZOsjK1-d7NfQJmAUN4">
+</div>
+<span class="font-title-sm text-title-sm group-hover:text-primary transition-colors">The Hub Studio - 401</span>
+</td>
+<td class="py-3 px-4 text-secondary">Aug 15, 2024</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-secondary-container text-on-secondary-container border border-secondary-container">
+                                        Pending
+                                    </span>
+</td>
+<td class="py-3 px-4 text-right font-body-base text-body-base">$950/mo</td>
+</tr>
+<tr class="hover:bg-surface-bright transition-colors group cursor-pointer">
+<td class="py-3 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-surface-variant flex-shrink-0 overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Spacious townhome exterior near campus, well-lit, professional real estate photography, light mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqgBQdZioohiJQi4fE6X6RiBC3OeDrjCfqDRH1eS7YxjT43_VW1pmIif7sSMcQqKKYppLQml4KB33D8QToaspExNkx00ZigpUD6u-maHiZjaLFkmAhd8LKcPwOqe0bvm9H9GEVtjUdrSYANg7guSvbhzLN0MBc-cgl1ieaINONSX_xScn9XjlqKJD9vyjDFFDaKJK1G_-mfad2r32eTxJTEAega30wyrLy3luT43nlhMSnZoSvhtE">
+</div>
+<span class="font-title-sm text-title-sm group-hover:text-primary transition-colors">Campus Townhomes - Unit C</span>
+</td>
+<td class="py-3 px-4 text-secondary">Jul 10, 2024</td>
+<td class="py-3 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full text-xs font-semibold bg-surface-container-high text-on-surface border border-outline-variant">
+                                        Approved
+                                    </span>
+</td>
+<td class="py-3 px-4 text-right font-body-base text-body-base">$2,100/mo</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</main>
+</div>
+</body></html>
